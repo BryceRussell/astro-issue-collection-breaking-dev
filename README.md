@@ -1,3 +1,3 @@
 # Astro Bug
 
-If a route created by content collections with file/slug named 'examples' breaks dev server
+If content collections has a file/slug named 'examples' it breaks the dev server
