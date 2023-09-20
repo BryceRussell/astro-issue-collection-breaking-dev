@@ -4,21 +4,16 @@ import { getCollection } from "astro:content";
 
 export const getStaticPaths = (async() => {
   const pages = await getCollection('pages')
-  return pages.map(entry => {
-    console.log(entry.slug === 'index'
-          ? undefined
-          : entry.slug)
-    return {
-      params: {
-        slug: entry.slug === 'index'
-          ? undefined
-          : entry.slug
-      },
-      props: {
-        entry
-      }
+  return pages.map(entry => ({
+    params: {
+      slug: entry.slug === 'index'
+        ? undefined
+        : entry.slug
+    },
+    props: {
+      entry
     }
-});
+  }))
 }) satisfies GetStaticPaths;
 
 const { entry } = Astro.props
