@@ -1,6 +1,6 @@
 # Example
 
-Content collection route breaks when file/slug is named `examples`
+If a route created by content collections with file/slug named 'examples' breaks dev server
 
 - [/example](/example)
 - [/examples](/examples)
